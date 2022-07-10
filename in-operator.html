@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Operator</title>
+  </head>
+  <body>
+    <script>
+
+      
+      const person = {
+        nama: "ronaldo",
+        belakang: "siswoyo",
+      };
+      const result = "nama" in person; //true
+      document.writeln(`<p>${result}</p>`);
+
+      if ("nama" in person) {
+        alert(`Hello ${person.nama}`);
+      } else {
+        alert("Not hello");
+      }
+
+      const student = {
+        firstName: "Pamela",
+        middleName: undefined,
+        lastName: "Mulyadi",
+      };
+
+      if ("middleName" in student) {
+        alert(`Hello kak ${student.middleName}`);
+      } else {
+        alert(`Mantap bukan kamu wkwkwk`);
+      }
+
+      //in operator didalam array
+      const names = [null, "Ronaldo", null];
+      const hasil = 0 in names;
+      document.writeln(`<p>${hasil}</p>`);
+    </script>
+  </body>
+</html>

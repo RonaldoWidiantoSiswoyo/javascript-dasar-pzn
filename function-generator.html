@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      function* createNames() {
+        yield "Ronaldo";
+        yield "Widianto";
+        yield "Siswoyo";
+      }
+      const names = createNames();
+      for (const name of names) {
+        console.log(name);
+      }
+
+      //   cara akses generator ini menggunakan iterasi, maka harus menggunakan for of
+      // bentuknya memang menyerupai array, tapi cara menggunakannya seperti penjelasan diatas
+
+      // fungsinya untuk bisa mereturn banyak prameter, karena pada function expression biasa, hanya bisa mereturn satu parameter
+      //   sifatnya tidak bisa diakses sembarangan, karena hanya bisa menggunakan iterasi
+      // tidak bsa juga diakses menggunakan index sperti array
+
+      //   contoh lain
+      function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.log(`Yield : ${i}`);
+            yield i;
+          }
+        }
+      }
+      function* buatGanjilArray(value) {
+        const result = [];
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.log(`Yield : ${i}`);
+            yield i;
+            result.push[i];
+          }
+        }
+        return result;
+      }
+      const number = buatGanjil(100);
+      //   for (const hasil of number) {
+      //     console.log(hasil);
+      //   }
+
+      //   sifat dari generator ini adalah LAZY, dimana kalo kita ga tarik atau eksekusi iterasinya, maka dia gamau kerja
+
+      //   LAZY GENERATOR
+      console.info(number.next().value);
+      console.info(number.next().value);
+      console.info(number.next().value);
+    </script>
+  </body>
+</html>

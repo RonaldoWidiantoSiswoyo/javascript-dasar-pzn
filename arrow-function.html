@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      const sayHello = (name) => {
+        const say = `Hello ${name}`;
+        console.info(say);
+      };
+      sayHello("Eko");
+
+      const sayHai = (name) => console.log(`Hello ${name}`);
+
+      const sum = (satu, dua) => satu + dua;
+      console.log(sum(2, 3));
+
+      //   arrow funcion sbagai parameter :
+      function giveMeName(callback) {
+        callback("Eko");
+      }
+      giveMeName((name) => console.info(`Hello mas ${name}`));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi Number dan String</title>
+  </head>
+  <body>
+    <script>
+      const value1 = 1;
+      const value2 = parseInt("1");
+
+      const sum = value1 + value2;
+      document.writeln(`<p> ${sum} </p>`);
+
+      document.writeln(`<p> ${parseInt("1.1")} </p>`);
+      document.writeln(`<p> ${parseFloat("1.1")} </p>`);
+      document.writeln(`<p> ${Number("1.1")} </p>`);
+
+      const a = 1;
+      const b = 1;
+
+      const total = a.toString() + b.toString();
+      document.writeln(`<p> ${total} </p>`);
+
+      document.writeln(`<p> ${parseInt("1salah")} </p>`); //hasilnya akan satu, karna didepannya diawali oleh angka
+      document.writeln(`<p> ${parseFloat("1salah")} </p>`); //hasilnya akan satu, karna didepannya diawali oleh angka
+      document.writeln(`<p> ${parseFloat("a1salah")} </p>`); //hasilnya akan NaN, karna didepannya diawali oleh huruf
+
+      document.writeln(`<p> ${Number("1salah")} </p>`); //hasilnya akan NaN, karna ada huruf didalamnya
+
+      //   NaN jika dihasilkan oleh data apapun, hasilnya akan tetap NaN
+      const first = Number("salah"); // NaN
+      const totalNumber = first + 100; // NaN
+      document.writeln(`<p> ${totalNumber} </p>`);
+
+      //isNaN berfugnsi untuk mengecek suatu nilai dari variable apakah nilai tersebut nan atau tidak
+      const cek = document.writeln(`<p> ${isNaN(first)} </p>`); //maka hasolnya akan true
+      document.write(`<p> ${isNaN(100)} </p>`);
+    </script>
+  </body>
+</html>

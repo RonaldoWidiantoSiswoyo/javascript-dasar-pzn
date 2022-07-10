@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Statement</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Ronaldo",
+        middleName: "Widianto",
+        lastName: "Siswoyo",
+      };
+      console.log(`${person.firstName}`);
+      console.log(`${person.middleName}`);
+      console.log(`${person.lastName}`);
+
+      const firstName = "Budi";
+      const lastName = "Nugroho";
+      //   fungsinya untuk mempersingkat cara mengambil properti yang terdapat pada object
+      //   tapi tidak direkomendasikan karena akan membuat kode menjadi ambigu
+      with (person) {
+        console.log(`${person.firstName}`);
+        console.log(`${person.middleName}`);
+        console.log(`${person.lastName}`);
+      }
+    </script>
+  </body>
+</html>

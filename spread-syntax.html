@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Syntax</title>
+  </head>
+  <body>
+    <script>
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total ${name} ${total}</p>`);
+      }
+
+      //   fungsinya untuk mengubah array untuk bisa dimasukkan ke paramter di function, dengan cara menambahkan titik tiga ... didepan argumentnya
+      const values = [2, 3, 4, 5, 3, 4, 5, 7, 6];
+      sum("Orange", ...values);
+
+      //   ARGUMENTS OBJECT
+      function oldSum() {
+        let total = 0;
+        for (const argumen of arguments) {
+          total += argumen;
+        }
+        document.writeln(`<p>Total is ${total}</p>`);
+      }
+      oldSum(1, 2, 3, 4, 5);
+    </script>
+  </body>
+</html>

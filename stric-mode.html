@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stric Mode</title>
+  </head>
+  <body>
+    <script>
+      //stric mode berfungsi untuk memperlihatkan syntax yang seharusnya tidak digunakan pada Javscript, contohnya var,with
+      //   jika kita masih menggunakan syntax tersebut, maka Javascript akan error
+      //   kalo pengen aman, ya harus gunakan stric mode
+
+      function useStrictMode() {
+        "useStrictMode";
+        const person = {
+          firstName: "Ronaldo",
+        };
+
+        //error
+        with (person) {
+          console.log(firstName);
+        }
+      }
+      useStrictMode();
+    </script>
+  </body>
+</html>

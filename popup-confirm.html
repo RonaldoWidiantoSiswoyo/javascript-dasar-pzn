@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Confirm</title>
+  </head>
+  <body>
+    <script>
+      const masuk = confirm("Yakin mau masuk kesini?");
+
+      if (masuk) {
+        const name = prompt("Siapa nama anda?");
+        alert(`Halo ${name}, selamat datang di website kami`);
+      } else {
+        alert("bye byeee");
+      }
+    </script>
+  </body>
+</html>
